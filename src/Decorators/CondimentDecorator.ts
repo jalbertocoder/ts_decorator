@@ -1,10 +1,9 @@
 import { Beverage } from '../Beverages/Beverage';
 
 abstract class CondimentDecorator extends Beverage {
+    beverage: Beverage;
 
-    getDescription(): void {
-        console.log('This is the description of the Condiment');
-    }
+    abstract getDescription(): string;
 }
 
 export { CondimentDecorator };

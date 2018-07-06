@@ -3,8 +3,12 @@ import { Beverage } from './Beverage';
 class HouseBlend extends Beverage {
     price: number = 3;
 
+    constructor() {
+        super();
+        this.description = 'HouseBlend';
+    }
+
     cost(): number {
-        console.log('HouseBlend cost ', this.price);
         return this.price;
     }
 }

@@ -11,13 +11,11 @@ class Soy extends CondimentDecorator {
     }
 
     cost(): number {
-        console.log('Soy cost ', this.price);
-        console.log('This beverage with Soy cost ', this.beverage.cost() + this.price);
         return this.beverage.cost() + this.price;
     }
 
-    getDescription(): void {
-        console.log('This is the description of the Soy');
+    getDescription(): string {
+        return this.beverage.description + ' + Soy';
     }
 }
 

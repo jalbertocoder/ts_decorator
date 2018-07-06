@@ -11,13 +11,11 @@ class Whip extends CondimentDecorator {
     }
 
     cost(): number {
-        console.log('Whip cost ', this.price);
-        console.log('This berverage with Whip cost ', this.beverage.cost() + this.price);
         return this.beverage.cost() + this.price;
     }
 
-    getDescription(): void {
-        console.log('This is the description of the Whip');
+    getDescription(): string {
+        return this.beverage.description + ' + Whip';
     }
 }
 

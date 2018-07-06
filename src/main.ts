@@ -21,15 +21,10 @@ function main() {
     espresso = new Espresso();
     houseBlend = new HouseBlend();
 
-    darkRoast.cost();
-    decaf.cost();
-    espresso.cost();
-    houseBlend.cost();
-
-    darkRoast.getDescription();
-    decaf.getDescription();
-    espresso.getDescription();
-    houseBlend.getDescription();
+    console.log(darkRoast.getDescription(), 'cost', darkRoast.cost());
+    console.log(decaf.getDescription(), 'cost', decaf.cost());
+    console.log(espresso.getDescription(), 'cost', espresso.cost());
+    console.log(houseBlend.getDescription(), 'cost', houseBlend.cost());
 
     let milk: CondimentDecorator;
     let mocha: CondimentDecorator;
@@ -41,20 +36,16 @@ function main() {
     soy = new Soy(espresso);
     whip = new Whip(houseBlend);
 
-    milk.cost();
-    mocha.cost();
-    soy.cost();
-    whip.cost();
-
-    milk.getDescription();
-    mocha.getDescription();
-    soy.getDescription();
-    whip.getDescription();
+    console.log(milk.getDescription(), 'cost', milk.cost());
+    console.log(mocha.getDescription(), 'cost', mocha.cost());
+    console.log(soy.getDescription(), 'cost', soy.cost());
+    console.log(whip.getDescription(), 'cost', whip.cost());
 
     let specialBeverage: Beverage;
-    specialBeverage = new Milk(new Mocha(new Soy(new Whip(new Espresso))));
-    specialBeverage.cost();
-    specialBeverage.getDescription();
+    specialBeverage = new Milk(new Mocha(new Soy(new Whip(new Espresso()))));
+
+    console.log('===================== Especial Beverage =====================');
+    console.log(specialBeverage.getDescription(), 'cost', specialBeverage.cost());
 }
 
 main();
