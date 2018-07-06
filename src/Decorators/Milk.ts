@@ -14,7 +14,7 @@ class Milk extends CondimentDecorator {
     }
 
     getDescription(): string {
-        return this.beverage.description + ' + Milk';
+        return this.beverage.getDescription() + ' + Milk';
     }
 }
 

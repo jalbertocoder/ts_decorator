@@ -14,7 +14,7 @@ class Mocha extends CondimentDecorator {
     }
 
     getDescription(): string {
-        return this.beverage.description + ' + Mocha';
+        return this.beverage.getDescription() + ' + Mocha';
     }
 }
 

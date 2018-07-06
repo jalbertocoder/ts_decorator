@@ -15,7 +15,7 @@ class Whip extends CondimentDecorator {
     }
 
     getDescription(): string {
-        return this.beverage.description + ' + Whip';
+        return this.beverage.getDescription() + ' + Whip';
     }
 }
 

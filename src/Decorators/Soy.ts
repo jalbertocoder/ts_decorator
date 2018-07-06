@@ -15,7 +15,7 @@ class Soy extends CondimentDecorator {
     }
 
     getDescription(): string {
-        return this.beverage.description + ' + Soy';
+        return this.beverage.getDescription() + ' + Soy';
     }
 }
 
